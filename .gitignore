@@ -1,2 +1,3 @@
 /bin
-/target
+target
+bh_tsne/bh_tsne
