@@ -1,3 +1,6 @@
 /bin
 target
 bh_tsne/bh_tsne
+.classpath
+.project
+.settings/

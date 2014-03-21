@@ -21,6 +21,7 @@ package org.t3as.clusteval
 
 import scala.io.Source
 import org.slf4j.LoggerFactory
+import scala.language.postfixOps
 
 object Main {
   val log = LoggerFactory.getLogger(getClass)
