@@ -11,9 +11,20 @@ File compile_linux (in the original distribution):
 	echo "Make sure to change the path to CBLAS in this file before running it!" 
 	g++ quadtree.cpp tsne.cpp -o bh_tsne -O3 -I./CBLAS/include -L./ -lcblas
 
+21 Mar 2014:
 After installing g++, I have files: /usr/include/cblas.h and /usr/lib/libblas.so so I compiled with:
 
 	g++ quadtree.cpp tsne.cpp -o bh_tsne -O3 -lblas 
+
+26 Jul 2019 update:
+After: `sudo apt install libblas-dev` I have files: `/usr/include/x86_64-linux-gnu/cblas.h` and `/usr/lib/x86_64-linux-gnu/libblas.so`
+Error from above compilation command:
+
+    quadtree.h:41:34: error: ‘double abs(double)’ conflicts with a previous declaration
+    ...
+    /usr/include/c++/7/bits/std_abs.h:70:3: note: previous declaration ‘constexpr double std::abs(double)’
+
+Commented out the definition of abs on line 41 and it compiles OK.
 
 ## Run
 
